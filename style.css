@@ -1,0 +1,152 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    -webkit-tap-highlight-color:transparent;
+}
+
+body{
+    width:100%;
+    height:100vh;
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#ffc0cb;
+    font-family:Arial,Helvetica,sans-serif;
+    position:relative;
+}
+
+.container{
+    width:90%;
+    max-width:380px;
+    text-align:center;
+    z-index:2;
+}
+
+h1{
+    font-size:34px;
+    color:#d81b60;
+    margin-bottom:12px;
+    font-weight:bold;
+}
+
+p{
+    font-size:22px;
+    margin-bottom:35px;
+    color:#333;
+}
+
+.buttons{
+    display:flex;
+    justify-content:center;
+    gap:18px;
+}
+
+button{
+    border:none;
+    outline:none;
+    color:white;
+    font-size:20px;
+    font-weight:bold;
+    border-radius:15px;
+    padding:15px 30px;
+    cursor:pointer;
+    transition:.25s;
+    box-shadow:0 8px 20px rgba(0,0,0,.18);
+}
+
+#yes{
+    background:#1fa53b;
+}
+
+#no{
+    background:#ff2d2d;
+}
+
+.finish{
+    width:100%;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    background:#ffc0cb;
+    text-align:center;
+    overflow:hidden;
+}
+
+.finish h1{
+    font-size:42px;
+    color:#e91e63;
+    margin-bottom:12px;
+}
+
+.finish h2{
+    font-size:30px;
+    color:#ff4081;
+    margin-bottom:20px;
+}
+
+.love-image{
+    width:85%;
+    max-width:340px;
+    border-radius:20px;
+    box-shadow:0 12px 35px rgba(0,0,0,.25);
+    animation:zoom 1s ease;
+}
+
+.heart{
+    position:fixed;
+    bottom:-50px;
+    font-size:28px;
+    animation:fly 4s linear forwards;
+    pointer-events:none;
+}
+
+@keyframes fly{
+    0%{
+        transform:translateY(0);
+        opacity:1;
+    }
+    100%{
+        transform:translateY(-120vh);
+        opacity:0;
+    }
+}
+
+@keyframes zoom{
+    from{
+        opacity:0;
+        transform:scale(.8);
+    }
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+@media(max-width:430px){
+
+h1{
+font-size:30px;
+}
+
+p{
+font-size:20px;
+}
+
+button{
+font-size:18px;
+padding:14px 24px;
+}
+
+.finish h1{
+font-size:36px;
+}
+
+.finish h2{
+font-size:26px;
+}
+
+}
